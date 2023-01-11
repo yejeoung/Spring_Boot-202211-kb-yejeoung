@@ -32,6 +32,7 @@ public class FileControllor {
 
 	// 파일을 서버에서 다운로드 (GET)
 	@GetMapping("download/{fileName}")
+//	리스소스 그 자체를 쓰고 싶을 경우 ResponseEntity를 사용함
 	public ResponseEntity<Resource> fileDownload(@PathVariable("fileName") String fileName) {
 		return ResponseEntity
 				.ok()
