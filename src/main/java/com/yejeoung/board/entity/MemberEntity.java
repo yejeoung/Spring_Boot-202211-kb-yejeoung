@@ -19,6 +19,8 @@ import lombok.NoArgsConstructor;
 	주소
 */
 
+/* 개인정보들은 암호화 */
+
 @Data
 @Builder
 @NoArgsConstructor

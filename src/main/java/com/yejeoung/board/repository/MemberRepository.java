@@ -18,7 +18,7 @@ public interface MemberRepository extends JpaRepository<MemberEntity, String> {
 	// SELECT만 하면 무조건 list로 나온다.
 	// @Query : 커스텀 ORM 메서드를 작성
 	// 테이블 명을 alias로 지정해서 사용해야한다.
-	// ?1, ?2, ... : 매개변수로 받아온 변수를 해당 위치로 넣기 위한 구문이다.
+	// ?1, ?2, ... : 매개변수로 받아온 변수를 해당 위치로 넣기 위한 구문
 	@Query("select m from MEMBER m WHERE m.email = ?1")
 	public List<MemberEntity> myFindAll(String email);
 }
