@@ -1,5 +1,7 @@
 package com.yejeoung.board.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +30,11 @@ public class UserController {
 	@GetMapping("{email}")
 	public ResponseDto<GetUserResponseDto> getUser(@PathVariable("email") String email) {
 		return userService.getUser(email);
+	}
+	
+	@GetMapping("")
+	public ResponseDto<List<GetUserResponseDto>> getAllUser() {
+		return userService.getAllUser();
 	}
 
 	@PostMapping("")
